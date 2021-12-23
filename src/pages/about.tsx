@@ -1,6 +1,5 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { Link, withPrefix } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/common/Layout';
 import Seo from '../components/common/Seo';

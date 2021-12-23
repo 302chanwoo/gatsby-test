@@ -6,7 +6,7 @@
  */
 
 import * as React from 'react';
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -24,7 +24,7 @@ interface Site {
       title: string;
       description: string;
       author: string;
-      image: string;
+      defaultImage: string;
     };
   };
 }
@@ -37,15 +37,15 @@ function Seo({ description, lang, meta, title, image }: Props) {
             title
             description
             author
+            defaultImage
           }
         }
       }
     `,
   );
-  console.log('Seo site', site);
 
   const metaDescription = description || site.siteMetadata.description;
-  const metaImage = image || site.siteMetadata.image;
+  const metaImage = image || site.siteMetadata.defaultImage;
   const defaultTitle = site.siteMetadata?.title;
 
   return (
