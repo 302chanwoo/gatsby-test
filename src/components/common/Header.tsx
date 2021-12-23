@@ -6,8 +6,8 @@ interface Props {
   siteTitle: string;
 }
 const Header = ({ siteTitle }: Props) => {
-  console.log('header', window.location);
-  const { pathname } = window.location;
+  const pathname =
+    typeof window !== 'undefined' ? window.location.pathname : '';
   return (
     <header css={headerStyle}>
       <h1>
