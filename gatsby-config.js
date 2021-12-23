@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Igby609`,
-    description: `Igby609 is an illustrator.`,
+    description: `Igby609 is an illustrator`,
     author: `@Igby609`,
     defaultImage: `/igby609.jpg`,
     siteUrl: 'https://stage.igby609.com',
